@@ -24,6 +24,7 @@ like it is written adj.get(1).add(2) in java, in c++ it will be adj[1].push_back
 means at array list of index 1 add 2 in it;
 likewise adj.get(u).add(v) and adj.get(v).add(u) , if it is not directed but if it is directed
 write only first one , no need for second;
+a single node can also be said a graph
 if you want that you should visit every node so u can traverse by each and every edges 
 and by code here it goes
 for(i=1->10)

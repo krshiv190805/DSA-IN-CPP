@@ -37,5 +37,6 @@ return last+slast;
 }
 int main(){
 cout<<f(4);  (TC will be 2^n(approximately), for n it is 2 recurisve , for n-1 is 2 and so on)
+
 }
 */
