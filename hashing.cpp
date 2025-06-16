@@ -18,4 +18,70 @@ but if you declare it globally outside main() then
 it can be 1e7(10^7)
 if you are declaring a boolean then inside int main
 it would be 10^7 and outside main it can be upto 10^8
+ now code for character hashing:
+ int main(){
+ string s;
+ cin>>s;
+ int hash[26]={0}; // also you can do hash[256]={0} but then 
+ for(int i=0;i<s.size();i++){
+ hash[s[i]-'a']++;//if you write the above one then hash[s[i]++]
+ }
+ int q;
+ cin>>q;
+ while(q--){
+ char c;
+ cin>>c;
+ cout<<hash[c-'a']<<endl;//hash[c]
+ }
+ }
+  IMPORTANT: now about map
+  map is a data structure which stores key and value 
+  and they can be of any type 
+  code :
+  int n;
+  cin>>n;
+  int arr[n];
+  for(int i=0;i<n;i++){
+  cin>>arr[i];
+  }
+  map<int,int>mpp;
+  for(int i=0;i<n;i++){
+  mpp[arr[i]]++;
+  }
+  for(auto it:mpp){
+  cout<<it.first<<"->"<<it.second<<endl;
+  }
+
+  int q;
+  cin>>q;
+  while(q--){
+  int number;
+  cin>>number;
+  cout<<mpp[number]<<endl;
+  }
+
+  Very Important:
+  time complexity for a map : 
+  for storing and fetching it takes Log(N) in its best average and worst case
+  and unordered_map takes O(1) at its average and best for storing and fetching
+  and at its worst it takes O(N)[this happens very low]
+  N=number of elements in map
+
+Hashing is of three types :
+1) division method
+2)folding method
+3)mid square method
+the interviewer will not ask you about these just 
+know the meanning of collisions and understand it properly
+1) in this you divide the elements of the array by 10
+and mark the array whose index is what the remainder is(for eg: 139%10=9)
+mark 9th index:
+now the problem is
+if there are so many number whose remainder to 10 is same
+so they will be stored at a particular index in soted manner 
+by chain, so collisions will happen if only a particular index is 
+filling not any other
+also in unordered map you cannot store the key in all the possible ways(like int , float etc)
+but in ordered map you can
+
 */
