@@ -10,7 +10,7 @@ int high=n-1;
 while(low<=high){
 int mid=(low+high)/2;
 if(arr[mid]==k) return mid;
-if(arr[low]<=arr[mid]){
+if(arr[low]<=arr[mid]){//left sorted
 if(arr[low]<=k && arr[mid]>=k){
 high=mid-1;}
 else {
