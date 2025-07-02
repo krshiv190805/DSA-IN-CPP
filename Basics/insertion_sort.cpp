@@ -12,7 +12,6 @@ void insertion_sort(int arr[],int n){//worst time complexity will be O(n^2) and 
     }
     }
 }
-
  int main(){
         int n;
         cin>>n;

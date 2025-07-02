@@ -66,7 +66,7 @@ void merge(vector<int>&arr, int low, int mid, int high){
         temp.push_back(arr[right]);
         right++;
     }
-    for(int i=low,i<= high,i++){
+    for(int i=low;i<= high;i++){
         arr[i]=temp[i-low];
     }
 }
