@@ -9,11 +9,11 @@ fun nCr(int n,int r){
 int res=1;
 for(int i=0;i<r;i++){
 res=res*(n-i);
-res=res/(i+1)
+res=res/(i+1);
 }
 return res;
 }
-sol_2)for second 
+sol_2)for second
 the code goes like:
 for(c=1;c<=n;c++){  (n is row number)
 cout<<nCr(n-1,r-1);
