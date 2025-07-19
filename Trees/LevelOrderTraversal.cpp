@@ -21,7 +21,7 @@ in which we will traverse by level
  if(node->left!=null) q.push(node->left);
  if(node->right!=null) q.push(node->right);
  }
- ans.push_back(level); //TC-O(N)[due to traversal of all the nodes] and SC-O(N)[store all the elements of queue]
+ ans.push_back(level); //TC-O(N)[due to traversal of all the nodes] and SC-O(N)[store all the elements of queue] , we are ignoring the space for ans (as we are using it to return the final output)
  }
  return ans;
  }
