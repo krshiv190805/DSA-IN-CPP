@@ -26,16 +26,17 @@ we will use better approach
  now code: 
  //TC-O(NlogN) as we are using ordered map , but if you use unordered map it will use O(1) but end up taking O(N) in its worst case
 //SC-O(N) as it might that all prefix sums are stored in the map so O(N)
- int findAllSubarraysWithGivenSum(vector<int>&arr,int k){
+int findAllSubarraysWithGivenSum(vector<int>&arr,int k){
 map<int,int>mpp;
-mpp[0]=1;
+mpp[0]=1; // if there is [3 1 2] and k = 3 then without prefix Sum [3] is the array , so this will be missed if not taken 1
 int preSum=0,cnt=0;
 for(int i=0;i<arr.size();i++){
 preSum+=arr[i];
 int remove=preSum-k;
-cnt+=mpp[remove];
-mpp[preSum]+=1;
+cnt+=mpp[remove]; // if found the leftOver part then increase it by the freq found for it
+mpp[preSum]+=1; // if we found the PreSum then increase it by 1
 }
 return cnt;
 }
+//revised 
 */
