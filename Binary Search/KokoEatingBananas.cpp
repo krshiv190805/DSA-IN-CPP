@@ -16,7 +16,7 @@ code:
 func(arr,hourly){
 totalhrs=0;
 for(i=0->n-1){
-totalhrs+=ceil(arr[i]/hourly);
+totalhrs+=ceil(arr[i]/hourly);//here hourly is k
 }
 return totalhrs;
 }

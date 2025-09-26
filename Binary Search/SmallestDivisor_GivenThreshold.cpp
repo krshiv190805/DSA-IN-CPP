@@ -26,7 +26,7 @@
 
   now the optimal approach:
   we will use binary search to do this
-  we can the answer will be lying in 1 to n
+  we can tell that the answer will be lying in 1 to n
   so we can optimise by reducing the search space
   first we can first min element which is suitable and then the right space would be 
   eliminated as all will be satisfied but larger, as we want min 
@@ -42,7 +42,7 @@
   }
   int smallestDivisor(vector<int>&arr,int limit){//TC-O(log(max)base 2 * N) and SC-O(1)
   if(n>limit) return -1;
-  int low=1,high=*mx_element(arr.begin(),arr.end());
+  int low=1,high=*max_element(arr.begin(),arr.end());
   while(low<=high){
   int mid=(low+high)/2;
   if(sumbyD(arr,mid)<=limit){

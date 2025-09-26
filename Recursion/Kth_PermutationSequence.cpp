@@ -7,7 +7,7 @@ n=4 and k=17 for this value we would be building an approach
 and then proceeding further for our final code
 
 approach://TC-O(n!*n) for generating all subarrays and traversing through each by recursion, SC-O()
-we have to tell the array[k-1] present in the permutation
+we have to tell the array[k-1] present in the permutation (since we doing in 0 based indexing)
 and also it should be sorted
 now n=4 means 
 it would have elements from 1 to 4
@@ -16,18 +16,18 @@ for 1 , {2 3 4} - 6 permutations for this and we can also see the permutation fr
 3, {1 2 4} - same as above
 4, {1 2 3}- same as above
 total 24(4!)
-and again the three element array would be breaking into the 
+and again the three element array would be broken into the 
 same pattern as this is broken
 so when 16(the subarray we want-its index)
-first we will do 16/6=2 this will tell what would be the 
+first we will do 16/6=2 this will tell what would be the (16/6 done so that the remainder 4 can tell us about the first digit as 12 are occupied by 1 and 2 and then comes 3 for 13-16 and so on)
 first number of subaray which we are trying to find
 2 indicates first number-[3]
 3 more numbers are left
 now we will divide 16%6==4 and this remainder shows that
-4 sequence among the sequences is the required ans(starting with 3)
+4th sequence among the sequences is the required ans(starting with 3)
 and now our array becomes size of 3 and k=4(16%6==4)
 so now the next number is from this array of 3 numbers
-1-{2,4}-2 permutation from this(0-1)
+1-{2,4}-2 permutation from this(0-1) 
 2-{1,4}-2 permutation from this(2-3)
 4-{1,2}-2 permutation from this(4-5)
 as we can see the 4th permutation starts from 4
@@ -61,3 +61,4 @@ return ans;
 }//TC-O(N)*O(N) =O(N^2) , you are looking for four numbers so O(N) and also when you pickup one element the set reduces to size-1, and deletion of one element takes N
 SC-O(N) for the vector storing and returning the ans
 */
+//Revised , just check the marked points once 

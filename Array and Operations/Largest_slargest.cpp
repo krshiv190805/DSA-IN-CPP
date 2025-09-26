@@ -11,7 +11,7 @@ cout<<largest;(or return largest)
 2) second largest element in an array
 note: brute solution, first sort the array(but it takes NlogN(TC))
 int arr[];
-int largest=arr[n-1];
+int largest=arr[n-1]; // taken the last element to be the greatest
 for(int i=n-2;i>=0;i--){
 if(arr[i]!=largest){
 second_largest=arr[i];
@@ -40,7 +40,7 @@ return slargest; now we got a better TC which is O(N+N)~O(N) as for the two loop
 imp_note:: we are assuming that array does not contain negative integers, if it has
 change -1 to (INT_MIN)
 note:: this is the optimal solution
-int secondlargest(vector<int>&a,int n){
+int secondlargest(vector<int>&a,int n){ // only O(N) instead of @
 int largest=a[0];
 int slargest=[1];
 for(int i=1;i<n;i++){

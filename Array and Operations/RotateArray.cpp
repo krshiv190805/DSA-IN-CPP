@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include<iostream>
 using namespace std;
 int main()
 {
@@ -9,7 +9,7 @@ int temp=arr[0];
 for(int i=1;i<n;i++){
 arr[i-1]=arr[i];
 }
-arr[n-1]=temp;
+arr[n-1]=temp;  // changing arr[0] to the end with n-1 index
 return arr;
 }
 now we will move the array or rotate the array by k places
@@ -22,10 +22,10 @@ for(int i=0;i<d;i++){ O(d)+O(n-d)+O(d)=O(n+d)->TC and SC-O(d) to store the extra
 temp[i]=arr[i];
 }
 for(i=d;i<n;i++){
-a[i-d]=a[i];
+a[i-d]=a[i]; // like 1 2 3 4 5 and k = 3 , so to make 4 and 5 index starting from 0
 }
 for(i=n-d;i<n;i++){
-a[i]=temp[i-(n-d)];
+a[i]=temp[i-(n-d)]; // and 1 2 3 index after pushing 4 and 5
 }
 Important:
 second and space optimised approach for this
@@ -34,6 +34,8 @@ reverse(arr,arr+d);
 reverse(arr+d,arr+n);
 reverse(arr,arr+n); TC-O(2N) but SC-O(1) or u can write the recursive code for swapping two elements insted of the built in reverse function
 }
+//follow up do the same second approach for rightRotate as well
 */
+//Revised but check the marked points only, rest assured
  return 0;
 }

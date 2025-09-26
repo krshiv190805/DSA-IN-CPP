@@ -8,7 +8,7 @@ you have to give candies to children according to their rating
 child_1[]={1 2 3}
 child_2[]={1 3 2 1}
 each children has atleast one candy
-and children with higher rating has> neighbour
+and children with higher rating has more candies than its neighbour(it means both neighbour left and right)
 1) in first you gave one candy to the first child
 then you have to give 2 candies to the second
 to satisfy the second condition and 3 to the third child 
@@ -64,18 +64,19 @@ left[i]=left[i-1]+1;
 }
 else left[i]=1
 }
-curr=1,right=1;sum=max(1,left[n-1]);
+curr=1,right=1;sum=max(1,left[n-1]); // already updated sum so not need to take it with right , as we have compared it with 1
 for(i=n-2;i>=0;i--){
 if(rating[i]>rating[i+1]){
-curr=right+1;
+curr=right+1; // we took a curr pointing to right since we only need to update curr at the end
 right=curr;
 }
 else curr=1;
 sum=sum+max(left[i],curr);
 }
-return sum ;//TC is O(2N) and SC is O(N)
+return sum ; //TC is O(2N) and SC is O(N)
 }
 
 */
  return 0;
 }
+//revised

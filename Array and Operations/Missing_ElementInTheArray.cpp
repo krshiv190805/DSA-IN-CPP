@@ -39,6 +39,7 @@ int main()
     return xor1^xor2;
     }
     */
+   //this is 1
  return 0;
  
 }

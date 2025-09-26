@@ -1,4 +1,5 @@
 #include<bits/stdc++.h>
+//changed after revision-CAR
 using namespace std;
 int main()
 {
@@ -16,6 +17,7 @@ int main()
  while(l<m && r<n){
  if(greed[r]<=size[l]){
  r=r+1;
+ l=l+1; //CAR
  }
  l=l+1;
  }
@@ -26,3 +28,5 @@ int main()
 }
 //7 8 9 10
 //5 6 7 8
+
+//Revised

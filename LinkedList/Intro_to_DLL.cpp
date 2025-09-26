@@ -1,0 +1,5 @@
+/*
+ in this we will be studying about all the basic operations about DLL 
+ and also how we can make a q easy by DLL
+ 
+*/
