@@ -14,11 +14,11 @@ if(cnt==2) repeating=i;
 else if(cnt==0) missing =i;
 if(repeating !=-1 && missing !=-1) break;
 }
-better approach:
+better approach : 
 now we will use hashmap of size n+1 with 0 initial value
 so that the element which is 0 after the traversal
 we can get that at the last
-code:
+code :
 vector<int>findMissingRepeatingNumbers(vector<int>a){
 int n=a.size();
 int hash[n+1]={0};//TC-O(2N) , SC-O(N)
@@ -41,7 +41,7 @@ then subtract it , we get one equation
 and then we will add the sum of squares of the elements present in it 
 and subtract from the squares sum from 1 to N
 another equation we get (x-y=val1) , (x^2-y^2=val2)
-x= repeating number,y=missing number
+y= repeating number,x=missing number // i have changed x <-> y
 then solve the two linear equation
 code:
 vector<int>FindmisingrepeatingNum(vector<int>a){
@@ -57,7 +57,7 @@ S2+=(long long)a[i]*(long long)a[i];
 }
 long long val1=S-SN;
 long long val2=S2-S2N;
-val2=val2/val1;//x+y
+val2=val2/val1; //x+y
 }
 */
 
